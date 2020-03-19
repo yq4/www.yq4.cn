@@ -1,21 +1,154 @@
-﻿<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>一起试试</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="image/icon.png" >
+    <meta name="viewport" content="width=device-width ,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <title>一起试试</title>
 </head>
+<script type="text/javascript">
+    var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
+    var browser = navigator.userAgent.toLowerCase();
+    var isMobile = false;
+    for (var i = 0; i < mobileAgent.length; i++) {
+        if (browser.indexOf(mobileAgent[i]) != -1) {
+            isMobile = true;
+            location.href = './smsMobile.html';
+            break;
+        }
+    }
 
+    function playMusic() {
+        var playMusic =document.getElementById('myVideo');
+        document.getElementById('playMusic').style.visibility='hidden';
+        playMusic.muted =false;
+    }
+</script>
+<style type="text/css">
+    body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+        margin: 0;
+        padding: 0;
+    }
+
+    body, button, input, select, textarea {
+        font: 12px
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 100%;
+    }
+
+    address, cite, dfn, em, var {
+        font-style: normal;
+    }
+
+    code, kbd, pre, samp {
+        font-family: couriernew, courier, monospace;
+    }
+
+    small {
+        font-size: 12px;
+    }
+
+    ul, ol {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    sup {
+        vertical-align: text-top;
+    }
+
+    sub {
+        vertical-align: text-bottom;
+    }
+
+    legend {
+        color: #000;
+    }
+
+    fieldset, img {
+        border: 0;
+    }
+
+    button, input, select, textarea {
+        font-size: 100%;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    /*.middle-view #code:hover{*/
+    /*transform: scale(2.5);*/
+    /*}*/
+</style>
 <body>
-
-<center style="margin-top:200px;">
-<h1>
-<p>
-Welcome 一起试试欢乐的试镜房间.
-<p>
-请您关注我们的服务，谢谢
-</h1>
-
-成都家章成粒信息技术有限公司
-<br>
-Copyright © 2020
-</center>
+<div class="container" style="position: fixed;width: 100%;height: 100%;min-width: 1100px">
+    <div class="video-bg" style="width:100% ;height: 100%;">
+        <video id="myVideo" muted loop="loop" autoplay style="object-fit: cover;width:100% ;height: 100%">
+            <source src="http://static-1301489916.file.myqcloud.com/www/video-bg.mp4" type='video/mp4;'>
+        </video>
+    </div>
+    <div class="header" style="position:absolute;top: 35px;width:100%;overflow: hidden;">
+        <div class="header floatLeft" style="margin-left:30px;height: 100%">
+            <a href="#"><img style="width:12%;position: relative;top: 8%;left: 3%;" src="http://static-1301489916.file.myqcloud.com/www/header-icon.png"
+                             alt="logo"/></a>
+        </div>
+        <div class="header floatRight" style="position: absolute;right:110px;top: 10px">
+            <ul style="list-style: none">
+                <!--<li style="display: inline-block;font-family: 微软雅黑;text-shadow:1px 1px 2px rgba(0,0,0,0.7)">-->
+                    <!--<a style=";text-decoration: none;color: #fff;font-size: 18px" href="http://139.219.99.176/">产品特色</a>-->
+                <!--</li>-->
+                <!--<li style="display: inline-block;margin-left: 60px;font-family: 微软雅黑;text-shadow:1px 1px 2px rgba(0,0,0,0.7)">-->
+                    <!--<a style="text-decoration: none;font-size: 18px;color: #fff;" href="http://139.219.99.176/">商务合作</a>-->
+                <!--</li>-->
+                <!--<li style="display: inline-block;margin-left: 60px;font-family: 微软雅黑;text-shadow:1px 1px 2px rgba(0,0,0,0.7)">-->
+                    <!--<a style="text-decoration: none;font-size: 18px;color: #fff;" href="http://139.219.99.176/">招贤纳士</a>-->
+                <!--</li>-->
+                <li style="display: inline-block;margin-left: 60px;font-family: 微软雅黑;text-shadow:1px 1px 2px rgba(0,0,0,0.7)">
+                    <img id="playMusic" src="http://static-1301489916.file.myqcloud.com/www/禁音.svg"  width="19px" onclick="playMusic()">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="middle-view" style="position: absolute; top: 450px;right: 100px;width: 565px;float: right">
+        <img style="width: 100%;float: right" src="http://static-1301489916.file.myqcloud.com/www/middle-word.png"/>
+    </div>
+    <div class="middle-view word"
+         style="position: absolute; top: 550px;right:18px;width: 500px">
+        <div id="first-image" style="float:left;display: block;width: 120px;margin-left: 100px"><a href="https://www.pgyer.com/DLive"><img
+                style="width: 100%" src="http://static-1301489916.file.myqcloud.com/www/first-image.png"></a></div>
+        <div id="second-image" style="float:left;display: block;width: 120px;margin-left: 10px"><a href="http://lp.wan3.cn:8800/file/app-yq4-release-1.0.1.apk"><img
+                style="width: 100%" src="http://static-1301489916.file.myqcloud.com/www/second-image.png"></a></div>
+        <div id="code" class="code" onmouseenter="show()" style="float:left;display: block;width: 44px;margin-left: 10px;z-index:1"><img
+                style="width: 100%" src="http://static-1301489916.file.myqcloud.com/www/code.png"></div>
+        <div id="big-code" style="display: none;position: relative;left:43%" onmouseleave="hide()"><img
+                style="width: 200px" src="http://static-1301489916.file.myqcloud.com/www/code-02.png"></div>
+    </div>
+</div>
 </body>
+<script type="text/javascript">
+    function show() {
+        document.getElementById("code").style.display = "none";
+        document.getElementById("second-image").style.display = "none";
+        document.getElementById("first-image").style.display = "none";
+        document.getElementById("big-code").style.display = "block";
+    }
+
+    function hide() {
+        document.getElementById("code").style.display = "block";
+        document.getElementById("second-image").style.display = "block";
+        document.getElementById("first-image").style.display = "block";
+        document.getElementById("big-code").style.display = "none";
+    }
+</script>
 </html>
