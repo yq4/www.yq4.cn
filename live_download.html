@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN" prefix="og: http://ogp.me/ns#">
 
 <head>
@@ -21,13 +21,13 @@
             var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
             var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
             if(isAndroid) {
-                window.location.href("http://lp.wan3.cn:8800/file/app-yq4-release-1.0.1.apk");
+                window.location.href = "http://lp.wan3.cn:8800/file/app-yq4-release-1.0.1.apk";
             } 
             else if(isiOS) {
                 window.location.href = "http://www.pgyer.com/DLive";
             }
             else{
-                window.location.href = "https://yq4.github.io/www.yq4.cn/"
+                window.location.href = "http://www.yq4.cn/"
             }
         })();
     </script>
