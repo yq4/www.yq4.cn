@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <link rel="icon" href="http://static-1301489916.file.myqcloud.com/www/icon.png">
+    <meta name="viewport" content="width=device-width ,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title>一起试试</title>
+</head>
+<style type="text/css">
+    html, body {
+        height: 100%;
+        overflow: scroll;
+    }
+
+    body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+        margin: 0;
+        padding: 0;
+    }
+
+    body, button, input, select, textarea {
+        font-size: 12px
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 100%;
+    }
+
+    address, cite, dfn, em, var {
+        font-style: normal;
+    }
+
+    code, kbd, pre, samp {
+        font-family: couriernew, courier, monospace;
+    }
+
+    small {
+        font-size: 12px;
+    }
+
+    ul, ol {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    sup {
+        vertical-align: text-top;
+    }
+
+    sub {
+        vertical-align: text-bottom;
+    }
+
+    legend {
+        color: #000;
+    }
+
+    fieldset, img {
+        border: 0;
+    }
+
+    button, input, select, textarea {
+        font-size: 100%;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    video {
+        display: inline-block;
+        vertical-align: baseline;
+    }
+
+    /*.video-img {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*bottom: 0;*/
+    /*width: 100%;*/
+    /*z-index: 999;*/
+    /*cursor: pointer;*/
+    /*}*/
+    .cover_before {
+        animation: mask-out 1s;
+        -moz-animation: mask-out 1s; /* Firefox */
+        -webkit-animation: mask-out 1s; /* Safari and Chrome */
+        -o-animation: mask-out 1s; /* Opera */
+        animation-fill-mode: forwards;
+    }
+
+    .cover_after {
+        left: 0;
+        /*background:rgba(128,128,128,0.5);*/
+        animation: mask-in 1s;
+        -moz-animation: mask-in 1s; /* Firefox */
+        -webkit-animation: mask-in 1s; /* Safari and Chrome */
+        -o-animation: mask-in 1s; /* Opera */
+        animation-fill-mode: forwards;
+
+    }
+
+    @keyframes mask-out {
+        from {
+            background: rgba(0, 0, 0, 0.3);
+        }
+        to {
+        }
+    }
+
+    @keyframes mask-in {
+        from {
+        }
+        to {
+            background: rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    .hidden_body_before {
+        /*background:rgba(128,128,128,0.5);*/
+        animation: sidebar-in 0.7s;
+        -moz-animation: sidebar-in 0.7s; /* Firefox */
+        -webkit-animation: sidebar-in 0.7s; /* Safari and Chrome */
+        -o-animation: sidebar-in 0.7s; /* Opera */
+        animation-fill-mode: forwards;
+    }
+
+    .sidebar-animation {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0px;
+    }
+
+    .hidden_body_after {
+        /*background:rgba(128,128,128,0.5);*/
+        animation: sidebar-out 0.7s;
+        -moz-animation: sidebar-out 0.7s; /* Firefox */
+        -webkit-animation: sidebar-out 0.7s; /* Safari and Chrome */
+        -o-animation: sidebar-out 0.7s; /* Opera */
+        animation-fill-mode: forwards;
+
+    }
+
+    @keyframes sidebar-out {
+        from {
+            right: -100vw;
+        }
+        to {
+            right: 0vw;
+        }
+    }
+
+    @keyframes sidebar-in {
+        from {
+            right: 0;
+        }
+        to {
+            right: -100vw;
+        }
+    }
+</style>
+<body>
+<div style="padding-bottom: 177.777%;position:relative;">
+<div class="container"
+     style="position:absolute;overflow: hidden;display:flex;flex-direction:column;background: url(http://static-1301489916.file.myqcloud.com/www/mobile_bg.png) no-repeat;width: 100%;height: 100%;background-size: 100%;text-align: center">
+    <div id="cover" class="cover_after" style="display:none;position: fixed;width: 100%;height: 100%;z-index: 1;"
+         onclick="hide()"></div>
+    <div style="position:relative;width: 100%;display: flex;justify-self: center;align-items: center">
+        <video id="video" controls="controls" poster="http://static-1301489916.file.myqcloud.com/www/poster.jpg"
+               style="width:100%">
+            <source src="http://static-1301489916.file.myqcloud.com/www/video-bg.mp4" type="video/mp4">
+        </video>
+        <img id="poster" src="http://static-1301489916.file.myqcloud.com/www/poster.jpg" style="width: 100%;position: absolute">
+        <img id="play" src="http://static-1301489916.file.myqcloud.com/www/bofang.png" style="width: 13%;display: block;position: absolute;left: 46%;top: 36%;"
+             onclick="play()">
+    </div>
+    <div class="middle_body"
+         style=";background-size: cover;background-position:bottom;flex: 1;display: flex;align-items: center;flex-direction: column">
+        <img src="http://static-1301489916.file.myqcloud.com/www/header-icon02.png" style="width:50%;margin-top: 8vw">
+        <a href="https://www.pgyer.com/RNiA" style="width: 46%;;margin-top: 20vw;"><img src="http://static-1301489916.file.myqcloud.com/www/mobile_firstimage.png" style="width: 100%"></a>
+        <a href="http://static-1301489916.file.myqcloud.com/www/cn.yq4-1.0.5.apk" style="width: 46%;margin-bottom:50px;margin-top: 10vw;"><img
+                src="http://static-1301489916.file.myqcloud.com/www/mobile_secondimage.png" style="width: 100%"></a>
+    </div>
+</div>
+</div>
+
+</div>
+</body>
+<script type="text/javascript">
+
+    function play() {
+        document.getElementById("play").style.zIndex = "-1";
+        document.getElementById("poster").style.display = "none";
+        var audio = document.getElementById("video");
+        audio.play();
+    }
+
+    function show() {
+        document.getElementById("hidden_body").className = "hidden_body_after";
+        document.getElementById("hidden_body").style.display = "block";
+        document.getElementById("cover").style.display = "block";
+        document.getElementById("cover").className = "cover_after";
+    }
+
+    function hide() {
+        event.stopPropagation();
+        document.getElementById("hidden_body").className = "hidden_body_before";
+        document.getElementById("cover").className = "cover_before";
+        document.getElementById("cover").style.display = "none";
+    }
+</script>
+</html>
