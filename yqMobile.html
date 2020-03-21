@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -175,14 +175,15 @@
      style="position:absolute;overflow: hidden;display:flex;flex-direction:column;background: url(http://static-1301489916.file.myqcloud.com/www/mobile_bg.png) no-repeat;width: 100%;height: 100%;background-size: 100%;text-align: center">
     <div id="cover" class="cover_after" style="display:none;position: fixed;width: 100%;height: 100%;z-index: 1;"
          onclick="hide()"></div>
-    <div style="position:relative;width: 100%;display: flex;justify-self: center;align-items: center">
+    <div  style="position:relative;width: 100%;display: flex;justify-self: center;align-items: center" >
         <video id="video" controls="controls" poster="http://static-1301489916.file.myqcloud.com/www/poster.jpg"
                style="width:100%">
             <source src="http://static-1301489916.file.myqcloud.com/www/video-bg.mp4" type="video/mp4">
         </video>
-        <img id="poster" src="http://static-1301489916.file.myqcloud.com/www/poster.jpg" style="width: 100%;position: absolute">
-        <img id="play" src="http://static-1301489916.file.myqcloud.com/www/bofang.png" style="width: 13%;display: block;position: absolute;left: 46%;top: 36%;"
-             onclick="play()">
+        <div onclick="play()" style="background-image: url(http://static-1301489916.file.myqcloud.com/www/poster.jpg);
+        display: flex;justify-content:center;align-items:center;position:absolute;width: 100%;height: 100%;background-size: cover">
+        <img id="play" src="http://static-1301489916.file.myqcloud.com/www/bofang.png" style="width: 13%;display: block;"
+             ></div>
     </div>
     <div class="middle_body"
          style=";background-size: cover;background-position:bottom;flex: 1;display: flex;align-items: center;flex-direction: column">
