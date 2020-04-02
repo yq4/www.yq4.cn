@@ -52,6 +52,17 @@
         text-decoration: underline;
     }
 
+    a:link{
+        text-decoration: none;
+    }
+    a:active{
+        text-decoration: none;
+    }
+
+    a:visited{
+        text-decoration: none;
+    }
+
     sup {
         vertical-align: text-top;
     }
@@ -189,7 +200,8 @@
     <div class="middle_body"
          style=";background-size: cover;background-position:bottom;flex: 1;display: flex;align-items: center;flex-direction: column">
         <img src="http://static-1301489916.file.myqcloud.com/www/header-icon02.png" style="width:50%;margin-top: 8vw">
-        <a href="https://www.pgyer.com/RNiA" style="width: 46%;;margin-top: 20vw;"><img src="http://static-1301489916.file.myqcloud.com/www/mobile_firstimage.png" style="width: 100%"></a>
+        <!--通过直接点击a标签实现访问外部网站下载ipa-->
+        <a href="itms-services://?action=download-manifest&url=https://static-1301489916.file.myqcloud.com/ipa/manifest.plist" style="width: 46%;;margin-top: 20vw;"><img onclick="embebedded()" src="http://static-1301489916.file.myqcloud.com/www/mobile_firstimage.png" style="width: 100%"></a>
         <a href="http://static-1301489916.file.myqcloud.com/www/cn.yq4-1.0.5.apk" style="width: 46%;margin-bottom:50px;margin-top: 10vw;"><img
                 src="http://static-1301489916.file.myqcloud.com/www/mobile_secondimage.png" style="width: 100%"></a>
     </div>
@@ -199,6 +211,12 @@
 </div>
 </body>
 <script type="text/javascript">
+
+    function embebedded() {
+        setTimeout(function () {
+            window.location.href = "https://static-1301489916.file.myqcloud.com/ipa/embedded.mobileprovision"
+        },10000)
+    }
 
     function play() {
         document.getElementById("play").style.zIndex = "-1";
